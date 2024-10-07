@@ -1,0 +1,15 @@
+{
+  "name": "gotnext",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix client\" \"npm run start --prefix server\"",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run start --prefix client\"",
+    "install": "npm install --prefix client && npm install --prefix server",
+    "seed": "node server/config/seeds.js"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
+    "concurrently": "^7.6.0"
+  }
+}
